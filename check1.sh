@@ -9,12 +9,12 @@ echo "response $cache"
 if [ $cache -ge 800 ]
 then
         echo "cache status is ok"
-#	`echo -e "****************\n104 cache health\n****************"| mailx -v -s "cache" wangguoliang@testbird.com`
+#	`echo -e "****************\n104 cache health\n****************"| mailx -v -s "cache" xxx@xxx.com`
 else
         echo "cache error"
 	`docker restart $(docker ps |grep cache|awk '{print$1}')`
-	`echo -e "****************\n120cache 502\nrestarted cache now\n****************"| mailx -v -s "120cache" wangguoliang@testbird.com`
-#	`echo -e "****************\n120cache 502\nrestarted cache now\n****************"| mailx -v -s "120cache" lining@testbird.com`
+	`echo -e "****************\n120cache 502\nrestarted cache now\n****************"| mailx -v -s "120cache" xxx@xxx.com`
+#	`echo -e "****************\n120cache 502\nrestarted cache now\n****************"| mailx -v -s "120cache" xxx@xxx.com`
 fi
 #slave=`hostname`
 #`echo "$slave dt-fileserver " >> ping.log`
@@ -41,7 +41,7 @@ else
 			echo "quail-connent ok"
 		else
 			echo "file quail-connect error"
-			`echo filserver | mail -v -s "104fileserver--quail&&dt error" wangguoliang@testbird.com`
+			`echo filserver | mail -v -s "104fileserver--quail&&dt error" xxx@xxx.com`
 	fi
 fi
 #	`rm ping.log ping2.log`
